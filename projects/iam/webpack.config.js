@@ -1,19 +1,40 @@
+const {resolve, join} = require("path");
 const { ModuleFederationPlugin } = require('webpack').container;
-
+const TerserPlugin = require('terser-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const threadLoader = require('thread-loader');
+const webpack = require("webpack");
 /** @type {require('webpack').Configuration} */
 module.exports = {
+  devtool: 'cheap-module-source-map',
+  // entry: './src/index.js', // Thay đổi đường dẫn tới tệp chính của dự án của bạn
+  // entry: {
+  //   vendor: ['angular', 'rxjs'], // Các thư viện bạn muốn bao gồm trong DLL
+  // },
+  entry: {
+    myVendors: ['@angular/core', '@angular/common', 'rxjs'], // Thư viện Angular và RxJS
+  },
   output: {
     publicPath: 'auto', // we setup the `publicHost` in `angular.json` file
     uniqueName: 'iam',
+    path: resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].js', // Sử dụng [name] để lấy tên của chunk,
   },
   optimization: {
     runtimeChunk: false,
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   experiments: {
     // Allow output javascript files as module source type.
     outputModule: true,
   },
   plugins: [
+    // new BundleAnalyzerPlugin(),
+    new webpack.DllReferencePlugin({
+      context: __dirname,
+      manifest: require(join(__dirname, 'dist', 'vendor-manifest.json')),
+    }),
     new ModuleFederationPlugin({
       name: 'iam',
       filename: 'remoteEntry.js',
@@ -82,4 +103,13 @@ module.exports = {
       // },
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: 'thread-loader', // Sử dụng thread-loader cho tệp JavaScript
+        exclude: /node_modules/,
+      },
+    ],
+  },
 };

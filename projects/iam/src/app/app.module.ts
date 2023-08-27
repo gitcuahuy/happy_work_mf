@@ -23,6 +23,6 @@ export const APP_ROUTES: Routes = [
     RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
