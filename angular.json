@@ -362,7 +362,7 @@
             ],
             "scripts": [],
             "customWebpackConfig": {
-              "path": "projects/iam/webpack.config.js"
+              "path": "./projects/iam/webpack.config.js"
             }
           },
           "configurations": {

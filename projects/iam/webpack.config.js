@@ -24,6 +24,14 @@ module.exports = {
     runtimeChunk: false,
     minimize: true,
     minimizer: [new TerserPlugin()],
+    splitChunks: {
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          chunks: 'all',
+        },
+      },
+    }
   },
   experiments: {
     // Allow output javascript files as module source type.
@@ -33,7 +41,7 @@ module.exports = {
     // new BundleAnalyzerPlugin(),
     new webpack.DllReferencePlugin({
       context: __dirname,
-      manifest: require(join(__dirname, 'dist', 'vendor-manifest.json')),
+      manifest: require(join(__dirname, 'dist', 'myVendors-manifest.json')),
     }),
     new ModuleFederationPlugin({
       name: 'iam',
