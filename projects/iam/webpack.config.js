@@ -4,7 +4,7 @@ const { ModuleFederationPlugin } = require('webpack').container;
 module.exports = {
   output: {
     publicPath: 'auto', // we setup the `publicHost` in `angular.json` file
-    uniqueName: 'shell',
+    uniqueName: 'iam',
   },
   optimization: {
     runtimeChunk: false,
@@ -15,23 +15,20 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'shell',
+      name: 'iam',
+      filename: 'remoteEntry.js',
       library: {
         // because Angular v14 will output ESModule
         type: 'module',
       },
-      remotes: {
-        mailbox: 'http://localhost:5300/remoteEntry.js', // dường dẫn đến file remoteEntry.js của front-end mailbox
-        calendar: 'http://localhost:5400/remoteEntry.js', // dường dẫn đến file remoteEntry.js của front-end calendar
-        iam: 'http://localhost:5500/remoteEntry.js', // dường dẫn đến file remoteEntry.js của front-end calendar
+      exposes: {
+        './IamModule': 'projects/iam/src/app/iam/iam.module.ts',
       },
       /**
        * shared can be an object of type SharedConfig
        * you can change this to select something can be shared
        */
        shared: ['@angular/core', '@angular/common', '@angular/router'],
-
-
       // shared: {
       //   "@angular/animations": {
       //     singleton: true,

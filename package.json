@@ -9,6 +9,7 @@
     "test": "ng test",
     "start:shell": "ng serve --project=shell",
     "build:shell": "ng build --project=shell",
+    "start:iam": "ng serve --project=iam",
     "start:mailbox": "ng serve --project=mailbox",
     "start:calendar": "ng serve --project=calendar"
   },
