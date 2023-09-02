@@ -152,7 +152,68 @@ module.exports = {
        * shared can be an object of type SharedConfig
        * you can change this to select something can be shared
        */
-      shared: ['@angular/core', '@angular/common', '@angular/router'],
+      // shared: ['@angular/core', '@angular/common', '@angular/router'],
+      shared: {
+        "@ngrx/store": {
+          singleton: true,
+          eager: false,
+        },
+        '@ngrx/router-store': {
+          singleton: true,
+          eager: false},
+        'hp-shared': {
+          singleton: true,
+          eager: false},
+        "@angular/animations": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "^14.2.0",
+        },
+        "@angular/animations/browser": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "^14.2.0",
+        },
+        "@angular/common": {
+          eager: true,
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "^14.2.0",
+        },
+        "@angular/common/http": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "^14.2.0",
+        },
+        "@angular/core": {
+          eager: true,
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "^14.2.0",
+        },
+        "@angular/platform-browser": {
+          eager: true,
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "^14.2.0",
+        },
+        "@angular/platform-browser/animations": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "^14.2.0",
+        },
+        "@angular/router": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "^14.2.0",
+        },
+        "@angular/platform-browser-dynamic": {
+          eager: true,
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "^14.2.0",
+        },
+      },
       // shared: {
       //   "@angular/animations": {
       //     singleton: true,
