@@ -13,6 +13,7 @@ import {ComponentsModule} from "./components/components.module";
 import {LayoutModule} from "./layout/layout.module";
 import {NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
 import {LanguageService} from "./core/language.service";
+import {ReactiveFormsModule} from "@angular/forms";
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -32,6 +33,7 @@ registerLocaleData(vi);
     ToastrModule.forRoot({timeOut: 10000}), // ToastrModule added
     TranslateModule.forRoot(),
     LayoutModule,
+    ReactiveFormsModule
 
   ],
   exports: [
@@ -40,6 +42,7 @@ registerLocaleData(vi);
     TranslateModule,
     LayoutModule,
     NgbNavModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

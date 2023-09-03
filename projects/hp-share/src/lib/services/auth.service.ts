@@ -18,7 +18,7 @@ export class AuthenticationService extends BaseAuthService<IUser> implements IAu
 
   constructor() {
     super();
-    console.log(this._user.value);
+    console.log(this._user.value,' authService');
   }
 
   loginOauth(code: string, PARTNER_ID: string): Observable<AuthedResponse> {

@@ -32,7 +32,7 @@ export const CALENDAR_ROUTES: Routes = [
         useFactory: createTranslateLoader,
         deps: [HttpClient],
       },
-      defaultLanguage: 'en',
+      defaultLanguage: 'vi',
     }),
     RouterModule.forChild(CALENDAR_ROUTES),
   ],
