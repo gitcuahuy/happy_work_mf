@@ -6,6 +6,7 @@ import {AuthenticationService} from "../../services/auth.service";
 import {LanguageService} from "../../core/language.service";
 import {LOCAL_STORAGE_KEYS} from "../../auth/constants/storage.constants";
 import {IUser} from "../../app-state/models/user.model";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-topbar',
@@ -30,7 +31,7 @@ export class TopbarComponent implements OnInit {
               private router: Router,
               private authService: AuthenticationService,
               public languageService: LanguageService,
-              // public translate: TranslateService,
+              public translate: TranslateService,
               public _cookiesService: CookieService) {
   }
 
@@ -40,6 +41,7 @@ export class TopbarComponent implements OnInit {
     {text: 'German', flag: 'assets/images/flags/germany.jpg', lang: 'de'},
     {text: 'Italian', flag: 'assets/images/flags/italy.jpg', lang: 'it'},
     {text: 'Russian', flag: 'assets/images/flags/russia.jpg', lang: 'ru'},
+    {text: 'Việt Nam', flag: 'assets/images/flags/vietnam.png', lang: 'vi'},
   ];
 
   openMobileMenu: boolean = true;
@@ -70,6 +72,7 @@ export class TopbarComponent implements OnInit {
     this.countryName = text;
     this.flagvalue = flag;
     this.cookieValue = lang;
+    console.log('lang', lang);
     this.languageService.setLanguage(lang);
   }
 

@@ -11,7 +11,8 @@ import {ToastrModule} from "ngx-toastr";
 import {ScrollToModule} from "@nicky-lenaers/ngx-scroll-to";
 import {ComponentsModule} from "./components/components.module";
 import {LayoutModule} from "./layout/layout.module";
-import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
+import {LanguageService} from "./core/language.service";
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -27,10 +28,11 @@ registerLocaleData(vi);
     ScrollToModule.forRoot(),
     NgbNavModule,
     ComponentsModule,
-    LayoutModule,
     HttpClientModule,
     ToastrModule.forRoot({timeOut: 10000}), // ToastrModule added
-    TranslateModule
+    TranslateModule.forRoot(),
+    LayoutModule,
+
   ],
   exports: [
     HpShareComponent,
@@ -45,7 +47,8 @@ registerLocaleData(vi);
       useClass: JwtInterceptor,
       multi: true,
     },
-    HttpClient
+    HttpClient,
+    LanguageService
     ],
 })
 export class HpShareModule { }

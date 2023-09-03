@@ -37,7 +37,7 @@ export const MENU: MenuItem[] = [
       {
         id: 6,
         label: 'MENUITEMS.DASHBOARDS.LIST.BLOG',
-        link: '/',
+        link: '/iam/login',
         parentId: 2
       },
     ]

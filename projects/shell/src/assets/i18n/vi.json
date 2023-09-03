@@ -1,0 +1,315 @@
+{
+  "HEADER": {
+    "SEARCH": "Tìm kiếm...",
+    "MEGA_MENU": "Thực đơn lớn",
+    "NOTIFICATIONS": {
+      "TITLE": "Thông báo",
+      "VIEW_ALL": "Xem tất cả",
+      "LOAD_MORE": "Xem thêm..",
+      "FIRST": {
+        "TITLE": "Đơn hàng của bạn đã được đặt",
+        "TEXT": "Nếu một số ngôn ngữ hợp nhất ngữ pháp",
+        "TIME": "3 phút trước"
+      },
+      "SECOND": {
+        "TITLE": "James Lemire",
+        "TEXT": "Nó sẽ có vẻ giống như tiếng Anh đơn giản.",
+        "TIME": "1 giờ trước"
+      },
+      "THIRD": {
+        "TITLE": "Mặt hàng của bạn đã được vận chuyển",
+        "TEXT": "Nếu một số ngôn ngữ hợp nhất ngữ pháp",
+        "TIME": "3 phút trước"
+      },
+      "FOUR": {
+        "TITLE": "Salena Layfield",
+        "TEXT": "Là một người bạn Cambridge hoài nghi của tôi, người phương Tây.",
+        "TIME": "1 giờ trước"
+      }
+    },
+    "SETTINGS": "Cài đặt",
+    "UI": {
+      "TITLE": "Thành phần giao diện người dùng",
+      "LIGHTBOX": "Hộp đèn",
+      "RANGE_SLIDER": "Thanh trượt phạm vi",
+      "SWEET_ALERT": "Cảnh báo ngọt ngào",
+      "RATING": "Xếp hạng",
+      "FORMS": "Các hình thức",
+      "TABLES": "Những cái bàn",
+      "CHARTS": "Biểu đồ"
+    },
+    "APPLICATIONS": {
+      "TITLE": "Các ứng dụng",
+      "ECOMMERCE": "Thương mại điện tử",
+      "CALENDAR": "Lịch",
+      "EMAIL": "E-mail",
+      "PROJECTS": "Dự án",
+      "TASKS": "Nhiệm vụ",
+      "CONTACTS": "Liên lạc"
+    },
+    "EXTRA_PAGES": {
+      "TITLE": "Trang bổ sung",
+      "LIGHT_SIDEBAR": "Thanh bên nhẹ",
+      "COMPACT_SIDEBAR": "Thanh bên nhỏ gọn",
+      "HORIZONTAL_LAYOUT": "Bố cục ngang",
+      "MAINTENANCE": "BẢO TRÌ",
+      "COMING SOON": "Sắp ra mắt",
+      "TIMELINE": "Mốc thời gian",
+      "FAQ": "Câu hỏi thường gặp"
+    },
+    "LOGIN": {
+      "PROFILE": "Hồ sơ",
+      "MY_WALLET": "Ví của tôi",
+      "SETTINGS": "Cài đặt",
+      "LOCK_SCREEN": "Màn hình khóa",
+      "LOGOUT": "Đăng xuất"
+    }
+  },
+  "MENUITEMS": {
+    "MENU": {
+      "TEXT": "Thực đơn"
+    },
+    "DASHBOARDS": {
+      "TEXT": "Trang tổng quan",
+      "BADGE": "04",
+      "LIST": {
+        "DEFAULT": "Mặc định",
+        "SAAS": "Saas",
+        "CRYPTO": "Tiền điện tử",
+        "BLOG": "Blog"
+      }
+    },
+    "LAYOUTS": {
+      "TEXT": "Bố cục",
+      "LIST": {
+        "HORIZONTAL": "Nằm ngang",
+        "LIGHTSIDEBAR": "Thanh bên nhẹ",
+        "COMPACTSIDEBAR": "Thanh bên nhỏ gọn",
+        "ICONSIDEBAR": "Thanh bên biểu tượng",
+        "BOXED": "Bố cục đóng hộp",
+        "COLOREDSIDEBAR": "Thanh bên màu",
+        "VERTICAL": "Thẳng đứng",
+        "LIGHTTOPBAR": "Thanh trên nhẹ",
+        "COLOREDHEADER": "Tiêu đề màu",
+        "SCROLLABLE": "Có thể cuộn"
+      }
+    },
+    "APPS": {
+      "TEXT": "Ứng dụng"
+    },
+    "CALENDAR": {
+      "TEXT": "Lịch"
+    },
+    "CHAT": {
+      "TEXT": "Trò chuyện",
+      "BADGE": "Mới"
+    },
+    "FILEMANAGER": {
+      "TEXT": "Quản lý tập tin",
+      "BADGE": "Mới"
+    },
+    "ECOMMERCE": {
+      "TEXT": "Thương mại điện tử",
+      "LIST": {
+        "PRODUCTS": "Các sản phẩm",
+        "PRODUCTDETAIL": "Chi tiết sản phẩm",
+        "ORDERS": "Đơn đặt hàng",
+        "CUSTOMERS": "Khách hàng",
+        "CART": "Xe đẩy",
+        "CHECKOUT": "Thủ tục thanh toán",
+        "SHOPS": "Cửa hàng",
+        "ADDPRODUCT": "Thêm sản phẩm"
+      }
+    },
+    "CRYPTO": {
+      "TEXT": "Tiền điện tử",
+      "LIST": {
+        "WALLET": "Cái ví",
+        "BUY/SELL": "Mua bán",
+        "EXCHANGE": "Trao đổi",
+        "LENDING": "Cho vay",
+        "ORDERS": "Đơn đặt hàng",
+        "KYCAPPLICATION": "Ứng dụng KYC",
+        "ICOLANDING": "Đích ICO"
+      }
+    },
+    "EMAIL": {
+      "TEXT": "E-mail",
+      "LIST": {
+        "INBOX": "Hộp thư đến",
+        "READEMAIL": "Đọc mail",
+        "TEMPLATE": {
+          "BADGE": "Mới",
+          "TEXT": "Bản mẫu",
+          "LIST": {
+            "BASIC": "Hành động cơ bản",
+            "ALERT": "Email cảnh báo",
+            "BILLING": "thanh toán bằng thư điện tử"
+          }
+        }
+      }
+    },
+    "INVOICES": {
+      "TEXT": "Hóa đơn",
+      "LIST": {
+        "INVOICELIST": "Danh sách hóa đơn",
+        "INVOICEDETAIL": "Chi tiết hóa đơn"
+      }
+    },
+    "PROJECTS": {
+      "TEXT": "Dự án",
+      "LIST": {
+        "GRID": "Lưới dự án",
+        "PROJECTLIST": "Danh sách dự án",
+        "OVERVIEW": "Tổng quan dự án",
+        "CREATE": "Tạo mới"
+      }
+    },
+    "TASKS": {
+      "TEXT": "Nhiệm vụ",
+      "LIST": {
+        "TASKLIST": "Danh sach cong viec",
+        "KANBAN": "bảng Kanban",
+        "CREATETASK": "Tạo nhiệm vụ"
+      }
+    },
+    "CONTACTS": {
+      "TEXT": "Liên lạc",
+      "LIST": {
+        "USERGRID": "Lưới người dùng",
+        "USERLIST": "Danh sách người dùng",
+        "PROFILE": "Hồ sơ"
+      }
+    },
+    "BLOG": {
+      "TEXT": "Blog",
+      "BADGE": "Mới",
+      "LIST": {
+        "BLOGLIST": "Danh sách blog",
+        "BLOGGRID": "Lưới blog",
+        "DETAIL": "Chi tiết blog"
+      }
+    },
+    "PAGES": {
+      "TEXT": "Trang"
+    },
+    "AUTHENTICATION": {
+      "TEXT": "Xác thực",
+      "BADGE": "Mới",
+      "LIST": {
+        "LOGIN": "Đăng nhập",
+        "LOGIN2": "Đăng nhập 2",
+        "REGISTER": "Đăng ký",
+        "REGISTER2": "Đăng ký 2",
+        "RECOVERPWD": "Khôi phục mật khẩu",
+        "RECOVERPWD2": "Khôi phục mật khẩu 2",
+        "LOCKSCREEN": "Màn hình khóa",
+        "LOCKSCREEN2": "Màn hình khóa 2",
+        "CONFIRMMAIL": "Xác nhận thư",
+        "CONFIRMMAIL2": "Xác nhận thư 2",
+        "EMAILVERIFICATION": "Email xác thực",
+        "EMAILVERIFICATION2": "Xác minh email 2",
+        "TWOSTEPVERIFICATION": "Xác minh hai bước",
+        "TWOSTEPVERIFICATION2": "Xác minh hai bước 2"
+      }
+    },
+    "UTILITY": {
+      "TEXT": "Tính thiết thực",
+      "LIST": {
+        "STARTER": "Trang bắt đầu",
+        "MAINTENANCE": "BẢO TRÌ",
+        "TIMELINE": "Mốc thời gian",
+        "FAQS": "Câu hỏi thường gặp",
+        "PRICING": "Định giá",
+        "ERROR404": "Lỗi 404",
+        "ERROR500": "Lỗi 500"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "Các thành phần"
+    },
+    "UIELEMENTS": {
+      "TEXT": "Các thành phần giao diện người dùng",
+      "LIST": {
+        "ALERTS": "Cảnh báo",
+        "BUTTONS": "nút",
+        "CARDS": "thẻ",
+        "CAROUSEL": "băng chuyền",
+        "DROPDOWNS": "Danh sách thả xuống",
+        "GRID": "Lưới",
+        "IMAGES": "Hình ảnh",
+        "LIGHTBOX": "Hộp đèn",
+        "MODALS": "Phương thức",
+        "RANGESLIDER": "Thanh trượt phạm vi",
+        "PROGRESSBAR": "Thanh tiến trình",
+        "PLACEHOLDER": "Trình giữ chỗ",
+        "SWEETALERT": "Cảnh báo ngọt ngào",
+        "TABS": "Tab",
+        "TYPOGRAPHY": "kiểu chữ",
+        "VIDEO": "Băng hình",
+        "GENERAL": "Tổng quan",
+        "COLORS": "Màu sắc",
+        "CROPPER": "Trình cắt ảnh"
+      }
+    },
+    "FORMS": {
+      "TEXT": "Các hình thức",
+      "BADGE": "09",
+      "LIST": {
+        "ELEMENTS": "Các phần tử biểu mẫu",
+        "VALIDATION": "Xác thực mẫu",
+        "ADVANCED": "Biểu mẫu nâng cao",
+        "EDITOR": "Trình chỉnh sửa biểu mẫu",
+        "FILEUPLOAD": "Tải lên tệp biểu mẫu",
+        "REPEATER": "Bộ lặp biểu mẫu",
+        "WIZARD": "Trình hướng dẫn biểu mẫu",
+        "MASK": "Mặt nạ mẫu",
+        "LAYOUTS": "Bố cục biểu mẫu"
+      }
+    },
+    "TABLES": {
+      "TEXT": "Những cái bàn",
+      "LIST": {
+        "BASIC": "Bảng cơ bản",
+        "ADVANCED": "Bảng nâng cao"
+      }
+    },
+    "CHARTS": {
+      "TEXT": "Biểu đồ",
+      "LIST": {
+        "APEX": "Biểu đồ đỉnh",
+        "CHARTJS": "Biểu đồ Chartjs",
+        "CHARTIST": "Biểu đồ biểu đồ",
+        "ECHART": "Biểu đồ E"
+      }
+    },
+    "ICONS": {
+      "TEXT": "Biểu tượng",
+      "LIST": {
+        "BOXICONS": "hộp biểu tượng",
+        "MATERIALDESIGN": "Vật liệu thiết kế",
+        "DRIPICONS": "biểu tượng nhỏ giọt",
+        "FONTAWESOME": "Phông chữ tuyệt vời"
+      }
+    },
+    "MAPS": {
+      "TEXT": "Bản đồ",
+      "LIST": {
+        "GOOGLEMAP": "bản đồ Google"
+      }
+    },
+    "MULTILEVEL": {
+      "TEXT": "đa cấp",
+      "LIST": {
+        "LEVEL1": {
+          "1": "Cấp 1.1",
+          "2": "Cấp 1.2",
+          "LEVEL2": {
+            "1": "Cấp 2.1",
+            "2": "Cấp 2.2"
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {CalendarHomeComponent} from './calendar-home/calendar-home.component';
 import {LayoutComponent} from "../../../../hp-share/src/lib/layout/layout.component";
-import {LayoutModule} from "../../../../hp-share/src/lib/layout/layout.module";
 import {createTranslateLoader, HpShareModule} from "../../../../hp-share/src/lib/hp-share.module";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {HttpClient} from "@angular/common/http";
@@ -31,8 +30,9 @@ export const CALENDAR_ROUTES: Routes = [
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
-        deps: [HttpClient]
-      }
+        deps: [HttpClient],
+      },
+      defaultLanguage: 'en',
     }),
     RouterModule.forChild(CALENDAR_ROUTES),
   ],
