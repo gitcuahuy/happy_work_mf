@@ -7,6 +7,7 @@ import {SidebarComponent} from "./sidebar/sidebar.component";
 import {RouterLinkActive, RouterLinkWithHref, RouterOutlet} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
 import {SimplebarAngularModule} from "simplebar-angular";
+import {NgbDropdownModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {SimplebarAngularModule} from "simplebar-angular";
     RouterLinkWithHref,
     TranslateModule,
     RouterLinkActive,
-    SimplebarAngularModule
+    SimplebarAngularModule,
+    NgbDropdownModule
   ],
   exports: [
     LayoutComponent,

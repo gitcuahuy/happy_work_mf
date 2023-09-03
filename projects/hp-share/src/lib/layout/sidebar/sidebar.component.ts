@@ -1,6 +1,6 @@
-import {Component, OnInit, AfterViewInit, ElementRef, ViewChild, Input, OnChanges} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, ViewChild} from '@angular/core';
 // import MetisMenu from 'metismenu/dist/metisMenu';
-import {Router, NavigationEnd} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
 
 import {HttpClient} from '@angular/common/http';
 
@@ -8,6 +8,7 @@ import {MENU} from './menu';
 import {MenuItem} from './menu.model';
 import {TranslateService} from '@ngx-translate/core';
 import {EventService} from "../../core/event.service";
+import MetisMenu from "metismenujs";
 
 @Component({
   selector: 'app-sidebar',
@@ -21,16 +22,14 @@ import {EventService} from "../../core/event.service";
 export class SidebarComponent implements OnInit, AfterViewInit, OnChanges {
   @ViewChild('componentRef') scrollRef: any;
   @Input() isCondensed = false;
-  // menu: any;
+  menu: any;
   data: any;
 
   menuItems: MenuItem[] = [];
 
   @ViewChild('sideMenu') sideMenu?: ElementRef;
 
-  constructor(private eventService: EventService,
-              private router: Router,
-              public translate: TranslateService, private http: HttpClient) {
+  constructor(private eventService: EventService, private router: Router, public translate: TranslateService, private http: HttpClient) {
     router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
         this._activateMenuDropdown();
@@ -46,7 +45,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   ngAfterViewInit() {
-    // this.menu = new MetisMenu(this.sideMenu?.nativeElement);
+    this.menu = new MetisMenu(this.sideMenu?.nativeElement);
     this._activateMenuDropdown();
   }
 
@@ -55,13 +54,13 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnChanges {
   }
 
   ngOnChanges() {
-    // if (!this.isCondensed && this.sideMenu || this.isCondensed) {
-    //   setTimeout(() => {
-    //     this.menu = new MetisMenu(this.sideMenu?.nativeElement);
-    //   });
-    // } else if (this.menu) {
-    //   this.menu.dispose();
-    // }
+    if (!this.isCondensed && this.sideMenu || this.isCondensed) {
+      setTimeout(() => {
+        this.menu = new MetisMenu(this.sideMenu?.nativeElement);
+      });
+    } else if (this.menu) {
+      this.menu.dispose();
+    }
   }
 
   _scrollElement() {
@@ -112,7 +111,7 @@ export class SidebarComponent implements OnInit, AfterViewInit, OnChanges {
     if (menuItemEl) {
       menuItemEl.classList.add('active');
       const parentEl = menuItemEl.parentElement;
-      if (!!parentEl) {
+      if (parentEl) {
         parentEl.classList.add('mm-active');
         // @ts-ignore
         const parent2El = parentEl.parentElement.closest('ul');

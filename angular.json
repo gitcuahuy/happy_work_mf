@@ -29,11 +29,7 @@
             ],
             "styles": [
               "projects/shell/src/styles.scss",
-              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "projects/shell/src/styles.scss",
-              "projects/shell/src/assets/scss/bootstrap.scss",
-              "projects/shell/src/assets/scss/app.scss",
-              "projects/shell/src/assets/scss/icons.scss"
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css"
             ],
             "scripts": [],
             "customWebpackConfig": {

@@ -30,8 +30,12 @@
 
 /* Importing Bootstrap SCSS file. */
 
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap/scss/bootstrap';;
 @import 'ngx-toastr/toastr';
+@import "../../hp-share/css/bootstrap";
+@import "../../hp-share/css/app";
+@import "../../hp-share/css/icons";
+
 .cdk-overlay-container {
   z-index: 9999
 }

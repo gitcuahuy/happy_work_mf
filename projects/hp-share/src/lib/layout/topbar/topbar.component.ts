@@ -2,7 +2,7 @@ import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
 import {DOCUMENT} from '@angular/common';
 import {CookieService} from 'ngx-cookie-service';
-import {AuthenticationService} from "../../../../../hp-share/src/lib/services/auth.service";
+import {AuthenticationService} from "../../services/auth.service";
 import {LanguageService} from "../../core/language.service";
 import {LOCAL_STORAGE_KEYS} from "../../auth/constants/storage.constants";
 import {IUser} from "../../app-state/models/user.model";
