@@ -9,7 +9,7 @@
     "noImplicitOverride": true,
     "paths": {
       "hp-share": [
-        "dist/hp-share"
+        "dist/hp-share",
       ]
     },
     "noPropertyAccessFromIndexSignature": true,

@@ -92,3 +92,9 @@ export class User implements  IUser{
 export interface ILoginResponse extends AuthedResponse, IUser {
 
 }
+
+
+export interface UserState {
+  fullName: string;
+  email: string;
+}

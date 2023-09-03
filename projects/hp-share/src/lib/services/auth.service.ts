@@ -90,7 +90,7 @@ export class AuthenticationService extends BaseAuthService<IUser> implements IAu
    */
   public currentUser(): User {
     // return getFirebaseBackend().getAuthenticatedUser();
-    return {} as User;
+    return this._user.value as User;
   }
 
   /**
@@ -224,7 +224,7 @@ export class AuthenticationService extends BaseAuthService<IUser> implements IAu
    * Logout the user
    */
   logout(): Observable<void> {
-    this.user = null;
+    this.user = undefined;
     // return getFirebaseBackend().logout();
     return EMPTY
   }

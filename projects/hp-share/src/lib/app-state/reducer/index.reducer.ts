@@ -37,7 +37,7 @@ export const ROOT_REDUCERS = new InjectionToken<ActionReducerMap<State, Action>>
   'Root reducers token',
   {
     factory: () => ({
-      [fromUser.userFeatureKey]: fromUser.reducer,
+      [fromUser.userFeatureKey]: fromUser.userReducer,
       router: fromRouter.routerReducer,
     }),
   },
@@ -73,7 +73,8 @@ export const selectUserState = createFeatureSelector<State, fromUser.UserStateMo
   fromUser.userFeatureKey,
 );
 
-export const selectUsers = createSelector(selectUserState, fromUser.selectUsers);
+export const selectUsersSelector =
+  createSelector(selectUserState, fromUser.selectUsers);
 
 /**
  * Router Selectors

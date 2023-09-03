@@ -39,7 +39,8 @@ module.exports = {
           eager: false},
         'hp-shared': {
           singleton: true,
-          eager: false},
+          eager: true
+        },
         "@angular/animations": {
           singleton: true,
           strictVersion: true,

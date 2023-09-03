@@ -51,7 +51,7 @@ export abstract class BaseAuthService<T extends BaseCredential> {
     return this._user.asObservable();
   }
 
-  set user(user: any | undefined) {
+  set user(user: T | undefined) {
     this._user.next(user);
     if (user) {
       // this.localStorageService.store(LOCAL_STORAGE_KEYS.PROFILE, user);
