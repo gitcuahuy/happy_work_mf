@@ -2,11 +2,10 @@ import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
 import {DOCUMENT} from '@angular/common';
 import {CookieService} from 'ngx-cookie-service';
-import {TranslateService} from '@ngx-translate/core';
 import {AuthenticationService} from "../../../../../hp-share/src/lib/services/auth.service";
-import {LanguageService} from "../../../../../hp-share/src/lib/core/language.service";
-import {LOCAL_STORAGE_KEYS} from "../../../../../hp-share/src/lib/auth/constants/storage.constants";
-import {IUser} from "../../../../../hp-share/src/lib/app-state/models/user.model";
+import {LanguageService} from "../../core/language.service";
+import {LOCAL_STORAGE_KEYS} from "../../auth/constants/storage.constants";
+import {IUser} from "../../app-state/models/user.model";
 
 @Component({
   selector: 'app-topbar',
@@ -31,7 +30,7 @@ export class TopbarComponent implements OnInit {
               private router: Router,
               private authService: AuthenticationService,
               public languageService: LanguageService,
-              public translate: TranslateService,
+              // public translate: TranslateService,
               public _cookiesService: CookieService) {
   }
 

@@ -9,6 +9,7 @@ import {StoreModule} from "@ngrx/store";
 import {StoreRouterConnectingModule} from "@ngrx/router-store";
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
+import {NgbNavModule} from "@ng-bootstrap/ng-bootstrap";
 
 // export function initializeApp(mfService: MicrofrontendService): () => Promise<void> {
 //   return () => mfService.initialise();

@@ -1,12 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
-import { CalendarHomeComponent } from './calendar-home/calendar-home.component';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterModule, Routes} from '@angular/router';
+import {CalendarHomeComponent} from './calendar-home/calendar-home.component';
+import {LayoutComponent} from "../../../../hp-share/src/lib/layout/layout.component";
+import {LayoutModule} from "../../../../hp-share/src/lib/layout/layout.module";
+import {createTranslateLoader, HpShareModule} from "../../../../hp-share/src/lib/hp-share.module";
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {HttpClient} from "@angular/common/http";
 
 export const CALENDAR_ROUTES: Routes = [
   {
     path: '',
-    component: CalendarHomeComponent,
+    // component: CalendarHomeComponent,
+    component: LayoutComponent,
+    children: [{
+      path: '',
+      component: CalendarHomeComponent
+    }]
   }
 ];
 
@@ -16,7 +26,18 @@ export const CALENDAR_ROUTES: Routes = [
   ],
   imports: [
     CommonModule,
+    HpShareModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    }),
     RouterModule.forChild(CALENDAR_ROUTES),
-  ]
+  ],
+  providers: [HttpClient],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class CalendarModule { }
+export class CalendarModule {
+}

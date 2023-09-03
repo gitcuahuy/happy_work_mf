@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import {HttpClient} from "@angular/common/http";
 export const APP_ROUTES: Routes = [
   {
     path: '',
@@ -23,7 +24,6 @@ export const APP_ROUTES: Routes = [
     BrowserModule,
     RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
