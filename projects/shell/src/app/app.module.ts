@@ -7,12 +7,14 @@ import {HpShareModule} from "../../../hp-share/src/lib/hp-share.module";
 import {metaReducers, ROOT_REDUCERS} from "../../../hp-share/src/lib/app-state/reducer/index.reducer";
 import {StoreModule} from "@ngrx/store";
 import {StoreRouterConnectingModule} from "@ngrx/router-store";
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import {environment} from '../environments/environment';
 
 // export function initializeApp(mfService: MicrofrontendService): () => Promise<void> {
 //   return () => mfService.initialise();
 // }
 
- const APP_ROUTES: Routes = [
+const APP_ROUTES: Routes = [
   // {
   //   path: 'mailbox',
   //   loadChildren: () => import('mailbox/MailboxModule').then(m => m.MailboxModule)
@@ -52,6 +54,7 @@ import {StoreRouterConnectingModule} from "@ngrx/router-store";
     // }),
     // Connects RouterModule with StoreModule, uses MinimalRouterStateSerializer by default
     StoreRouterConnectingModule.forRoot(),
+    StoreDevtoolsModule.instrument({name: 'NgRx example', maxAge: 25, logOnly: environment.production}),
   ],
   providers: [
     // MicrofrontendService,
@@ -64,4 +67,5 @@ import {StoreRouterConnectingModule} from "@ngrx/router-store";
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

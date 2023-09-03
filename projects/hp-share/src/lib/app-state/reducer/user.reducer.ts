@@ -18,7 +18,7 @@ export const reducer = createReducer(
     users: [...state.users, user],
   })),
   on(UserActions.removeUser, (state, { user }) => ({
-    users: state.users.filter(u => !(u.email === user.email && u.name === user.name)),
+    users: state.users.filter(u => !(u.email === user.email && u.fullName === user.fullName)),
   })),
 );
 

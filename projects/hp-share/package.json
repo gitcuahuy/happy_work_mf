@@ -9,6 +9,7 @@
     "@ngrx/store": "^14.2.0"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "metismenu": "^3.0.7"
   }
 }
