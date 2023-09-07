@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
 
 
-import {EMPTY, Observable, of, throwError} from "rxjs";
+import {BehaviorSubject, EMPTY, Observable, of, throwError} from "rxjs";
 
 import {map} from "rxjs/operators";
 import {BaseAuthService, IAuthService} from "../auth/constants/base-auth.service";
-import {IUser, User} from "../app-state/models/user.model";
+import {IUser, User} from "hp-share";
 import {AuthedResponse} from "../auth/model/authedResponse";
 import {UserLevel} from "../auth/model/user/user.model";
 import {RegisterUserRequest} from "../auth/model/user/register-user.request";
@@ -15,10 +15,11 @@ import {RegisterUserRequest} from "../auth/model/user/register-user.request";
 export class AuthenticationService extends BaseAuthService<IUser> implements IAuthService<IUser> {
 
   // user: User;
+  count$ = new BehaviorSubject(0);
 
   constructor() {
     super();
-    console.log(this._user.value,' authService');
+    console.log(this._user.value, ' authService');
   }
 
   loginOauth(code: string, PARTNER_ID: string): Observable<AuthedResponse> {
@@ -172,7 +173,7 @@ export class AuthenticationService extends BaseAuthService<IUser> implements IAu
 
   verifyAccount(code: string): Observable<void> {
     // return getFirebaseBackend().verifyAccount(code);
-    return  EMPTY
+    return EMPTY
   }
 
   /**

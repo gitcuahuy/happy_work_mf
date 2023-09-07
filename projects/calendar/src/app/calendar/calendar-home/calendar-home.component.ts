@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthenticationService} from "../../../../../hp-share/src/lib/services/auth.service";
-import {IUser, User, UserState} from "../../../../../hp-share/src/lib/app-state/models/user.model";
-import {UserActions} from "../../../../../hp-share/src/lib/app-state/action/index.action";
+import {AuthenticationService} from "hp-share";
+import {IUser, User, UserState} from "hp-share";
 import {Store} from '@ngrx/store';
-import {selectUsersSelector} from "../../../../../hp-share/src/lib/app-state/reducer/index.reducer";
+import {selectUsersSelector} from "hp-share";
+import {UserActions} from "../../../../../hp-share/src/lib/app-state/action/index.action";
 
 @Component({
   selector: 'app-calendar-home',
@@ -20,6 +20,9 @@ export class CalendarHomeComponent implements OnInit {
     // @ts-ignore
     this.store.select(selectUsersSelector).subscribe(res => {
       console.log('xxxx calendar', res)
+    })
+    this.authService.count$.subscribe(res => {
+      console.log(res, 'count$')
     })
     // this.store.select(selectUsers)
     // this.store.select(selectUsers).subscribe(users => {

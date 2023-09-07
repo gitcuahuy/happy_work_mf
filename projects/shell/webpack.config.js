@@ -37,9 +37,10 @@ module.exports = {
         '@ngrx/router-store': {
           singleton: true,
           eager: false},
-        'hp-shared': {
+        'hp-share': {
           singleton: true,
-          eager: true
+          requiredVersion: '^0.0.1',
+          import: 'projects/hp-share/src/public-api'
         },
         "@angular/animations": {
           singleton: true,

@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {AuthenticationService} from "../../../hp-share/src/lib/services/auth.service";
-import {IUser, User, UserState} from "../../../hp-share/src/lib/app-state/models/user.model";
+import {AuthenticationService, UserState} from "hp-share";
 import {Store} from "@ngrx/store";
 import {UserActions} from "../../../hp-share/src/lib/app-state/action/index.action";
 
@@ -21,6 +20,7 @@ export class AppComponent {
         email: 'xxzzz' + i,
         fullName: 'xxx' + i
       }
+      this.authService.count$.next(i);
       this.addUser(user);
       i++;
     }, 1000)

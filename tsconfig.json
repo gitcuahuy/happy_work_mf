@@ -10,6 +10,8 @@
     "paths": {
       "hp-share": [
         "dist/hp-share",
+        "projects/hp-share/src/public-api.ts",
+        "projects/hp-share/src/lib/*"
       ]
     },
     "noPropertyAccessFromIndexSignature": true,
