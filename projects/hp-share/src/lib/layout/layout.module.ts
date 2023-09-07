@@ -8,6 +8,7 @@ import {RouterLinkActive, RouterLinkWithHref, RouterOutlet} from "@angular/route
 import {TranslateModule} from "@ngx-translate/core";
 import {SimplebarAngularModule} from "simplebar-angular";
 import {NgbDropdownModule} from "@ng-bootstrap/ng-bootstrap";
+import { PublicLayoutComponent } from './public-layout/public-layout.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {NgbDropdownModule} from "@ng-bootstrap/ng-bootstrap";
     LayoutComponent,
     SidebarComponent,
     TopbarComponent,
-    VerticalComponent
+    VerticalComponent,
+    PublicLayoutComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import {NgbDropdownModule} from "@ng-bootstrap/ng-bootstrap";
     LayoutComponent,
     SidebarComponent,
     TopbarComponent,
-    VerticalComponent],
+    VerticalComponent,
+    PublicLayoutComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class LayoutModule {

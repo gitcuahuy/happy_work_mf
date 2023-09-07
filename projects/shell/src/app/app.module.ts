@@ -10,23 +10,38 @@ import {StoreRouterConnectingModule} from "@ngrx/router-store";
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {environment} from '../environments/environment';
 import {NgbNavModule} from "@ng-bootstrap/ng-bootstrap";
+import {LayoutComponent} from "../../../hp-share/src/lib/layout/layout.component";
+import {PublicLayoutComponent} from "../../../hp-share/src/lib/layout/public-layout/public-layout.component";
 
 // export function initializeApp(mfService: MicrofrontendService): () => Promise<void> {
 //   return () => mfService.initialise();
 // }
 
 const APP_ROUTES: Routes = [
-  // {
-  //   path: 'mailbox',
-  //   loadChildren: () => import('mailbox/MailboxModule').then(m => m.MailboxModule)
-  // },
   {
-    path: 'calendar',
-    loadChildren: () => import('calendar/CalendarModule').then(m => m.CalendarModule)
+    path: '',
+    redirectTo: 'calendar',
+    pathMatch: 'full'
   },
   {
-    path: 'iam',
-    loadChildren: () => import('iam/IamModule').then(m => m.IamModule) // lưu ý lấy tên module từ file types.d.ts
+    path: 'p',
+    component: PublicLayoutComponent,
+    children: [
+      {
+        path: 'iam',
+        loadChildren: () => import('iam/IamModule').then(m => m.IamModule) // lưu ý lấy tên module từ file types.d.ts
+      }
+    ]
+  },
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'calendar',
+        loadChildren: () => import('calendar/CalendarModule').then(m => m.CalendarModule)
+      }
+    ]
   }
 ];
 

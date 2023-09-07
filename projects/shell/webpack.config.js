@@ -1,3 +1,4 @@
+const TerserPlugin = require("terser-webpack-plugin");
 const {ModuleFederationPlugin} = require('webpack').container;
 
 /** @type {require('webpack').Configuration} */
@@ -8,6 +9,16 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: false,
+    // minimize: true,
+    // minimizer: [new TerserPlugin()],
+    // splitChunks: {
+    //   cacheGroups: {
+    //     defaultVendors: {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       chunks: 'all',
+    //     },
+    //   },
+    // }
   },
   experiments: {
     // Allow output javascript files as module source type.
