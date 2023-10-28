@@ -2,7 +2,16 @@
   "name": "@bigcity/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run bigcity:serve:development",
+    "start:host": "nx run bigcity-host:serve:development",
+    "test:paranel": "nx run-many -t test lint e2e",
+    "build:all": "nx run-many --parallel --target=build ",
+
+    "run:shell": "nx run shell:serve:development",
+    "run:shop": "nx run shop:serve:development",
+    "run:cart": "nx run cart:serve:development"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.2.0",
@@ -34,10 +43,12 @@
     "@nx/jest": "17.0.1",
     "@nx/js": "17.0.1",
     "@nx/web": "17.0.1",
+    "@nx/webpack": "17.0.1",
     "@nx/workspace": "17.0.1",
     "@schematics/angular": "~16.2.0",
     "@swc-node/register": "~1.6.7",
     "@swc/core": "~1.3.85",
+    "@swc/helpers": "~0.5.2",
     "@types/jest": "^29.4.0",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
