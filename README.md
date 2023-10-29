@@ -26,6 +26,9 @@ nx g @nx/angular:host shell --remotes=shop,cart
 
 // lenh tao remote "about" link toi host co ten "shell"
 nx g @nx/angular:remote about --host=shell
+
+## config css global for all remote add shell
+
 =================
 ## Start the app
 
