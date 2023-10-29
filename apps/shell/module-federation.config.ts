@@ -11,6 +11,9 @@ const coreLibraries = new Set([
 const config: ModuleFederationConfig = {
   name: 'shell',
   remotes: ['shop', 'cart'],
+  exposes: {
+    "./config": "apps/shell/src/environment/environment.js", // Expose the environment file
+  },
   // Share core libraries, and avoid everything else
   // shared: (libraryName, defaultConfig) => {
   //   if (coreLibraries.has(libraryName)) {
