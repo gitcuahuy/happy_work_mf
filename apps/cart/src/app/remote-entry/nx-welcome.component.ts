@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { AuthService } from '@bigcity/shared-common';
 
 @Component({
   selector: 'bigcity-nx-welcome',
@@ -420,7 +421,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome cart 👋
+            Welcome cart 👋 {{count}}
           </h1>
         </div>
         <!--  HERO  -->
@@ -850,4 +851,11 @@ nx affected:e2e</pre>
   styles: [],
   encapsulation: ViewEncapsulation.None,
 })
-export class NxWelcomeComponent {}
+export class NxWelcomeComponent {
+  count = 0;
+  constructor(private authService: AuthService) {
+    authService.count$.subscribe((count) => {
+      this.count = count;
+    });
+  }
+}
